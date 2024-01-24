@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <div id="welcomeMessage" style="display: none; margin-top: 20px;">
+        <h3 id="loveMessage"></h3>
+    </div>
+
+    <script>
+        function login() {
+            // Mendapatkan nilai input username
+            var username = document.getElementById("username").value;
+
+            // Menyembunyikan form login
+            document.getElementById("loginForm").style.display = "none";
+
+            // Menampilkan pesan selamat datang
+            document.getElementById("welcomeMessage").style.display = "block";
+            document.getElementById("loveMessage").innerHTML = "I love u so much, " + "baby" + "!";
+        }
+    </script>
+
+</body>
+</html>
